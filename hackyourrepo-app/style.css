@@ -1,3 +1,67 @@
 /* 
   Write here your CSS rules for HackYourRepo!
 */
+
+body {
+  font-family: roboto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.app-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: blue;
+}
+
+.app-title {
+  padding: 0 2%;
+  color: white;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.repository-info {
+  border: 1px solid lightgrey;
+  width: 49%;
+  padding: 1%;
+  box-sizing: border-box;
+  margin: 1%;
+  margin-left: 0;
+}
+
+.contributors-info {
+  width: 49%;
+  border: 1px solid lightgray;
+  padding: 1%;
+  box-sizing: border-box;
+  margin: 1%;
+  margin-right: 0;
+}
+
+.title {
+  font-weight: bold;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 778px) {
+  .app-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .repository-info {
+    width: 100%;
+    margin: 1% 0;
+  }
+
+  .contributors-info {
+    width: 100%;
+    margin: 1% 0;
+  }
+}

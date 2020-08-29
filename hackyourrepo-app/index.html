@@ -20,6 +20,32 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <section class="app-bar">
+      <p class="app-title">HYF Repositories</p>
+      <select name="hyf-repositories" id="selectRepository">
+      </select>
+    </section>
+    <main class="app-content">
+      <section id="repo" class="repository-info">
+        <table id="repo-details">
+          <tr>
+            <td class="title">Repository:</td>
+            <td id="repository-name"></td>
+          </tr>
+          <tr>
+            <td class="title">Description:</td>
+            <td id="repository-description"></td>
+          </tr> <tr>
+            <td class="title">Forks:</td>
+            <td id="repository-forks"></td>
+          </tr> <tr>
+            <td class="title">Updated:</td>
+            <td id="repository-updated"></td>
+          </tr>
+        </table>
+      </section>
+      <section class="contributors-info"></section>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
