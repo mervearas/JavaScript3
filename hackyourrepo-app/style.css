@@ -49,6 +49,37 @@ body {
   vertical-align: top;
 }
 
+.contributors-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 2%;
+  border: 1px solid gray;
+  margin: 1%;
+}
+
+.contributors-info img {
+  width: 15%;
+}
+
+.contributors-info a {
+  padding: 2%;
+}
+
+.contributions {
+  margin-left: auto;
+  padding: 3%;
+  background-color: gray;
+  border-radius: 10%;
+}
+
+.errorContainer { 
+  width: 100%;
+  background-color: lightpink;
+  padding: 0 3%;
+}
+
 @media screen and (max-width: 778px) {
   .app-content {
     flex-direction: column;
