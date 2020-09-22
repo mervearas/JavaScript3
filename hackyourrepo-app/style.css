@@ -1,3 +1,124 @@
 /* 
   Write here your CSS rules for HackYourRepo!
 */
+
+body {
+  font-family: roboto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.app-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: blue;
+}
+
+.app-title {
+  padding: 0 2%;
+  color: white;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.repository-info {
+  border: 1px solid lightgrey;
+  width: 49%;
+  padding: 1%;
+  box-sizing: border-box;
+  margin: 1%;
+  margin-left: 0;
+}
+
+.contributors-info {
+  width: 49%;
+  border: 1px solid lightgray;
+  padding: 1%;
+  box-sizing: border-box;
+  margin: 1%;
+  margin-right: 0;
+}
+
+.title {
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.contributors-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 2%;
+  border: 1px solid gray;
+  margin: 1%;
+}
+
+.contributors-info img {
+  width: 15%;
+}
+
+.contributors-info a {
+  padding: 2%;
+}
+
+.contributions {
+  margin-left: auto;
+  padding: 3%;
+  background-color: gray;
+  border-radius: 10%;
+}
+
+.errorContainer { 
+  width: 100%;
+  background-color: lightpink;
+  padding: 0 3%;
+}
+
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2%;
+}
+
+.pagination-item {
+  padding: 2%;
+  color: lightskyblue;
+}
+
+.pagination-item:hover {
+  color: white;
+  background-color: lightblue;
+  border-radius: 15%;
+}
+
+.active {
+  background-color: mediumblue;
+  border-radius: 15%;
+  color: white;
+  padding: 2%;
+}
+
+@media screen and (max-width: 778px) {
+  .app-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .repository-info {
+    width: 100%;
+    margin: 1% 0;
+  }
+
+  .contributors-info {
+    width: 100%;
+    margin: 1% 0;
+  }
+}
