@@ -97,6 +97,7 @@ body {
   color: white;
   background-color: lightblue;
   border-radius: 15%;
+  cursor: pointer;
 }
 
 .active {
@@ -104,6 +105,7 @@ body {
   border-radius: 15%;
   color: white;
   padding: 2%;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 778px) {

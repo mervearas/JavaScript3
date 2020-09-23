@@ -2,26 +2,17 @@
 import { fetchData } from "./fetchData.js";
 import { createPagination } from './pagination.js';
 import { contributors_url } from './repository.js';
-let call = 0
-export function setContributors (currentPage) {
-    const pagination  = document.getElementById('pagination');
-    
-    if(pagination) {
-        pagination.innerHTML = '';
-    }
 
+export function setContributors (currentPage) {
     fetchData(contributors_url)
         .then((contributors) => {
             const totalPage = Math.ceil(contributors.length / 5);
-            console.log('totalPage,currentPage',totalPage, currentPage);
             const paginatedData = contributors.slice((currentPage - 1) * 5, currentPage * 5);
             createContributorsDom(paginatedData);
             createPagination(currentPage,totalPage);
     })
 }
 
-console.log(call);
-  
 function createContributorsDom(contributors) {
     const contributorsContainer = document.getElementById("contributors");
     contributorsContainer.innerHTML = '';
