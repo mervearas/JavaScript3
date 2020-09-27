@@ -69,9 +69,7 @@ function main () {
     button.addEventListener("click", () => {
         const imageElement = document.getElementById("pokemonImage")
         imageElement.remove();
-
-        main();
     })
 }
 
-window.onload = main();
+window.onload = main;

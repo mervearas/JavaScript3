@@ -11,16 +11,18 @@
   
 //   getAnonName('John', console.log);
 
-const getAnonName = (firstName) => new Promise((resolve, reject) => {
+const getAnonName = (firstName) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-        if (!firstName)
-            return reject(new Error("You didn't pass in a first name!"));
+      if (!firstName)
+        return reject(new Error("You didn't pass in a first name!"));
 
-        const fullName = `${firstName} Doe`;
+      const fullName = `${firstName} Doe`;
 
-        return resolve(fullName);
-        }, 2000);
-})
+      return resolve(fullName);
+    }, 2000);
+  });
+};
 
 getAnonName("Merve")
     .then((res) => {
