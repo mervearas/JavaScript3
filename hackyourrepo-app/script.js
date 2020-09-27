@@ -39,7 +39,7 @@ placeholderRepos.forEach(function(repository) {
 });
 
 function setSelectedRepositoryByName (repositoryName) {
-  const selectedRepository = placeholderRepos.filter(function(repository) {
+  const selectedRepository = placeholderRepos.find(function(repository) {
     if(repository.name === repositoryName) {
       return true;
     } else {
@@ -47,10 +47,10 @@ function setSelectedRepositoryByName (repositoryName) {
     }
   });
 
-  document.getElementById('repository-name').innerText = selectedRepository[0].name;
-  document.getElementById('repository-description').innerText = selectedRepository[0].description;
-  document.getElementById('repository-forks').innerText = selectedRepository[0].forks;
-  document.getElementById('repository-updated').innerText = selectedRepository[0].updated;
+  document.getElementById('repository-name').innerText = selectedRepository.name;
+  document.getElementById('repository-description').innerText = selectedRepository.description;
+  document.getElementById('repository-forks').innerText = selectedRepository.forks;
+  document.getElementById('repository-updated').innerText = selectedRepository.updated;
 }
 
 window.onload = setSelectedRepositoryByName(placeholderRepos[0].name);

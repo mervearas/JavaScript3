@@ -10,12 +10,7 @@ function getDogPhotoWithXhr(){
 
     xhr.onload = function(){
         if(xhr.status === 200){
-            let list = document.createElement("li");
-            let unorderedLidt = document.querySelector("ul");
-            unorderedLidt.appendChild(list);
-            let image = document.createElement("img");
-            image.src = JSON.parse(xhr.response).message;
-            list.appendChild(image);
+            displayDog(JSON.parse(xhr.response).message);
         }
     }
 
@@ -29,14 +24,18 @@ function getDogPhotoWithXhr(){
 function getDogPhotoWithAxios(){
     axios.get('https://dog.ceo/api/breeds/image/random')
         .then(function(response){
-            let list = document.createElement("li");
-            let unorderedLidt = document.querySelector("ul");
-            unorderedLidt.appendChild(list);
-            let image = document.createElement("img");
-            image.src = response.data.message;
-            list.appendChild(image);
+            displayDog(response.data.message);
         })
         .catch(function(err){
             console.log('An error occured!' + err);
         })
+}
+
+function displayDog(imageUrl) {
+    let list = document.createElement("li");
+    let unorderedList = document.querySelector("ul");
+    unorderedList.appendChild(list);
+    let image = document.createElement("img");
+    image.src = imageUrl;
+    list.appendChild(image);
 }
